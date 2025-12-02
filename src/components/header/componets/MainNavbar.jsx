@@ -23,7 +23,7 @@ const MainNavbar = ({ setIsNavOpen, isNavOpen, setIsMenuOpen }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
         {/* Logo */}
         <NavLink className="cursor-pointer" to="/" onClick={scrollHomeOnClick}>

@@ -1,5 +1,5 @@
 // HomeProductsSlider.jsx
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -15,6 +15,59 @@ const categories = {
   poles: "Lighting Poles",
   "solar-power-plant": "Solar Power Plants",
   services: "Our Services",
+};
+
+// --- Lazy wrapper: mounts children only when near viewport ---
+const LazyMount = ({
+  children,
+  rootMargin = "300px",
+  placeholderHeight = 260,
+}) => {
+  const ref = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  // If running in SSR (no window), mount immediately to avoid mismatch
+  const isSSR = typeof window === "undefined";
+  useEffect(() => {
+    if (isSSR) {
+      setIsVisible(true);
+      return;
+    }
+
+    if (isVisible) return; // already visible, no need to observe
+
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            obs.disconnect();
+          }
+        });
+      },
+      { root: null, rootMargin }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [isVisible, rootMargin, isSSR]);
+
+  return (
+    <div ref={ref} aria-busy={!isVisible} className="w-full">
+      {isVisible ? (
+        children
+      ) : (
+        // Simple skeleton placeholder — tweak to match your design system
+        <div
+          style={{ height: placeholderHeight }}
+          className="w-full rounded-md bg-white/60 border border-gray-100 shadow-sm flex items-center justify-center animate-pulse"
+        >
+          <div className="text-sm text-gray-400">Loading product…</div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 // Slider for each category
@@ -45,6 +98,7 @@ const CategorySlider = ({ title, items }) => {
         z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 
         flex items-center justify-center hover:opacity-70 transition-all 
         ${isBeginning ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+        aria-label={`Previous ${title}`}
       >
         <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700">
           &lsaquo;
@@ -57,6 +111,7 @@ const CategorySlider = ({ title, items }) => {
         z-20 w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 
         flex items-center justify-center hover:opacity-70 transition-all 
         ${isEnd ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+        aria-label={`Next ${title}`}
       >
         <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-700">
           &rsaquo;
@@ -74,6 +129,7 @@ const CategorySlider = ({ title, items }) => {
           nextEl: nextBtn.current,
         }}
         onBeforeInit={(swiper) => {
+          // safe way to attach navigation refs
           swiper.params.navigation.prevEl = prevBtn.current;
           swiper.params.navigation.nextEl = nextBtn.current;
         }}
@@ -90,7 +146,10 @@ const CategorySlider = ({ title, items }) => {
       >
         {items.map((product) => (
           <SwiperSlide key={product.id}>
-            <ProductCard id={product.id} />
+            {/* Lazy-mount the ProductCard when the slide is near viewport */}
+            <LazyMount rootMargin="400px" placeholderHeight={280}>
+              <ProductCard id={product.id} />
+            </LazyMount>
           </SwiperSlide>
         ))}
       </Swiper>
