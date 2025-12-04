@@ -2,17 +2,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import banners from "../../../data/banner";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const HeroCarousel = () => {
-  const slides = [
-    { id: 1, image: "/lights-banner.png" },
-    { id: 2, image: "/infra-banner.png" },
-  ];
-
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -28,7 +24,7 @@ const HeroCarousel = () => {
   }, [swiperInstance]);
 
   return (
-    <div className="relative w-full max-w-[1280px] mx-auto group h-[300px] sm:h-[400px] md:h-[450px] lg:h-[515px] overflow-hidden">
+    <div className="relative w-full max-w-[1280px] mx-auto group h-auto overflow-hidden">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         loop={true}
@@ -47,13 +43,16 @@ const HeroCarousel = () => {
         onSwiper={setSwiperInstance}
         className="w-full h-full"
       >
-        {slides.map((slide) => (
+        {banners.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <img
-              src={slide.image}
-              alt=""
-              className="w-full h-full object-cover"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
+              <img
+                src={slide.image}
+                alt=""
+                className="w-full h-auto object-contain"
+              />
+            </picture>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -64,7 +63,8 @@ const HeroCarousel = () => {
         className="
           absolute left-3 sm:left-5 top-1/2 -translate-y-1/2
           text-white
-          opacity-0 group-hover:opacity-100
+          opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+
           transition-opacity duration-300
           z-10
         "
@@ -78,7 +78,8 @@ const HeroCarousel = () => {
         className="
           absolute right-3 sm:right-5 top-1/2 -translate-y-1/2
           text-white
-          opacity-0 group-hover:opacity-100
+          opacity-100  lg:group-hover:opacity-100
+
           transition-opacity duration-300
           z-10
         "

@@ -22,9 +22,12 @@ import rainWaterHarvesting from "../assets/products/services/rain-water-harvesti
 import solarAmc from "../assets/products/services/solar-amc.png";
 
 // --------------- SOLAR POWER PLANTS -----------------
-import hybridPlant from "../assets/products/solar-power-plant/hybrid.png";
-import offGridPlant from "../assets/products/solar-power-plant/off-grid.png";
-import onGridPlant from "../assets/products/solar-power-plant/on-grid.png";
+// import hybridPlant from "../assets/products/solar-power-plant/hybrid.png";
+// import offGridPlant from "../assets/products/solar-power-plant/off-grid.png";
+// import onGridPlant from "../assets/products/solar-power-plant/on-grid.png";
+import hybridPlant from "../assets/products/solar-power-plant/hybrid-solar.png";
+import offGridPlant from "../assets/products/solar-power-plant/off-grid-solar.png";
+import onGridPlant from "../assets/products/solar-power-plant/on-grid-solar.png";
 
 export const products = [
   // ---------------------- SOLAR LIGHTS ----------------------

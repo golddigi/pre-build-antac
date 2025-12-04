@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer";
 import Certifications from "./components/shared/Certificate";
 import BackToTop from "./components/shared/BackToTop";
 import WhatsAppButton from "./components/shared/Whatsapp";
+import NotFound from "./components/shared/NotFound";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/certificate" element={<Certifications />} />
+          {/* other routes */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
       <BackToTop />
