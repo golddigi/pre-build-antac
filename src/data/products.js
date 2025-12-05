@@ -19,6 +19,7 @@ import solarHighMast from "../assets/products/poles/solar-high-mast.png";
 // --------------- SERVICES -----------------
 import poleInstallation from "../assets/products/services/pole-installation.png";
 import rainWaterHarvesting from "../assets/products/services/rain-water-harvesting.png";
+import solarCleaning from "../assets/products/services/solar-cleaning-worker.jpg";
 import solarAmc from "../assets/products/services/solar-amc.png";
 
 // --------------- SOLAR POWER PLANTS -----------------
@@ -316,6 +317,29 @@ export const products = [
 
   // ---------------------- SOLAR POWER PLANTS ----------------------
   {
+    id: "on-grid-plant",
+    name: "On Grid Solar Power Plant",
+    image: onGridPlant,
+    category: "solar-power-plant",
+    shortDescription: "Grid-tied solar plant for cost-efficient energy.",
+    description:
+      "Grid-connected solar power plant that feeds excess electricity back to the grid, helping you save more with net metering benefits and reduced electricity costs.",
+    features: [
+      "Direct grid connection",
+      "Net metering benefits",
+      "No battery requirement",
+      "Lower installation cost",
+      "Maximum ROI in 3-5 years",
+    ],
+    specifications: [
+      { label: "Capacity Range", value: "3kW - 1MW" },
+      { label: "Solar Panel", value: "Monocrystalline" },
+      { label: "Inverter Type", value: "Grid-tie Inverter" },
+      { label: "Efficiency", value: "Up to 98%" },
+      { label: "Warranty", value: "25 Years Panel" },
+    ],
+  },
+  {
     id: "hybrid-solar-plant",
     name: "Hybrid Solar Power Plant",
     image: hybridPlant,
@@ -361,29 +385,7 @@ export const products = [
       { label: "Warranty", value: "10 Years Panel" },
     ],
   },
-  {
-    id: "on-grid-plant",
-    name: "On Grid Solar Power Plant",
-    image: onGridPlant,
-    category: "solar-power-plant",
-    shortDescription: "Grid-tied solar plant for cost-efficient energy.",
-    description:
-      "Grid-connected solar power plant that feeds excess electricity back to the grid, helping you save more with net metering benefits and reduced electricity costs.",
-    features: [
-      "Direct grid connection",
-      "Net metering benefits",
-      "No battery requirement",
-      "Lower installation cost",
-      "Maximum ROI in 3-5 years",
-    ],
-    specifications: [
-      { label: "Capacity Range", value: "3kW - 1MW" },
-      { label: "Solar Panel", value: "Monocrystalline" },
-      { label: "Inverter Type", value: "Grid-tie Inverter" },
-      { label: "Efficiency", value: "Up to 98%" },
-      { label: "Warranty", value: "25 Years Panel" },
-    ],
-  },
+
   // ---------------------- SERVICES ----------------------
   {
     id: "pole-installation",
@@ -432,9 +434,42 @@ export const products = [
     ],
   },
   {
+    id: "solar-installation",
+    name: "Solar Panel Installation",
+    image: solarAmc, // keeping the same image variable as requested
+    category: "services",
+    shortDescription:
+      "Professional solar panel installation for homes and businesses.",
+    description:
+      "End-to-end solar panel installation service designed to deliver clean, reliable, and cost-efficient renewable energy. Our team handles site assessment, system design, installation, safety compliance, and performance optimization to ensure maximum power generation and long-term durability.",
+
+    features: [
+      "On-site survey and load analysis",
+      "Customized solar system design",
+      "Professional installation with certified technicians",
+      "Inverter and wiring setup",
+      "Net metering and government approval assistance",
+      "System testing and performance optimization",
+    ],
+
+    specifications: [
+      { label: "Installation Type", value: "Rooftop / Ground-mounted" },
+      { label: "Capacity Range", value: "1 kW – 1 MW" },
+      {
+        label: "Warranty",
+        value: "Up to 25 Years (panel), 5 Years (installation)",
+      },
+      {
+        label: "Installation Time",
+        value: "1–7 Days depending on system size",
+      },
+      { label: "Support", value: "Post-installation service and guidance" },
+    ],
+  },
+  {
     id: "solar-amc",
     name: "Solar AMC Service",
-    image: solarAmc,
+    image: solarCleaning,
     category: "services",
     shortDescription: "Annual maintenance for solar installations.",
     description:
