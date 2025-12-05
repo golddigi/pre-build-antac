@@ -6,7 +6,7 @@ const banners = [
   },
   {
     id: 2,
-    image: "/infrastructue-banner.png",
+    image: "/infrastructure-banner.png",
     mobileImage: "/infrastructure-banner-mobile.png",
   },
   {
