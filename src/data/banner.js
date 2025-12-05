@@ -1,13 +1,13 @@
 const banners = [
   {
     id: 1,
-    image: "/lights-banner.png",
-    mobileImage: "/lights-banner-mobile.png",
+    image: "/light-banner.png",
+    mobileImage: "/light-banner-mobile.png",
   },
   {
     id: 2,
-    image: "/infra-banner.png",
-    mobileImage: "/infra-banner-mobile.png",
+    image: "/infrastructue-banner.png",
+    mobileImage: "/infrastructure-banner-mobile.png",
   },
   {
     id: 3,
