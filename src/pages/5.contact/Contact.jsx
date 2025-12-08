@@ -62,13 +62,13 @@ const MAP_LOCATIONS = [
     title: "Office Location",
     address: contact.officeAddress,
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3512.9736926666665!2d76.85849931508236!3d28.21499598259234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzU0LjAiTiA3NsKwNTEnMzYuMCJF!5e0!3m2!1sen!2sin!4v1635000000000!5m2!1sen!2sin",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3515.8609508397717!2d76.85866637447673!3d28.211536903075796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d370057dcf35b%3A0xc41cc4463688b63a!2sAMBIKANATH%20TRADER%20AND%20CONSULTANT%20LLP!5e0!3m2!1sen!2sin!4v1765180696172!5m2!1sen!2sin",
   },
   {
     title: "Factory Location",
     address: contact.factoryAddress,
     embedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3513.486172156755!2d76.85029331508225!3d28.208566582595614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDEyJzMwLjgiTiA3NsKwNTEnMDYuNiJF!5e0!3m2!1sen!2sin!4v1635000000001!5m2!1sen!2sin",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3518.363982560546!2d76.88510577447357!3d28.135405706483763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d37bb120fcc19%3A0xceec5407babf39b0!2sSUDHIRWORKS!5e0!3m2!1sen!2sin!4v1765180452319!5m2!1sen!2sin",
   },
 ];
 

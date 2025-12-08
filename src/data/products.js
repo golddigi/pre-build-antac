@@ -15,6 +15,8 @@ import circularPoles from "../assets/products/poles/circular-poles.png";
 import designerPole from "../assets/products/poles/designer-pole.png";
 import octagonalPoles from "../assets/products/poles/octagonal-poles.png";
 import solarHighMast from "../assets/products/poles/solar-high-mast.png";
+// import solarMountingStructure from "../assets/products/poles/solar-mounting-structure.webp";
+import solarMountingStructure from "../assets/products/poles/solar-mounting-structure.png";
 
 // --------------- SERVICES -----------------
 import poleInstallation from "../assets/products/services/pole-installation.png";
@@ -312,6 +314,29 @@ export const products = [
       { label: "Battery Backup", value: "3-5 Days" },
       { label: "LED Power", value: "200W - 1000W" },
       { label: "Warranty", value: "5 Years" },
+    ],
+  },
+  {
+    id: "solar-mounting-structure",
+    name: "Solar Mounting Structure",
+    image: solarMountingStructure,
+    category: "poles",
+    shortDescription: "Durable and optimized mounting system for solar panels.",
+    description:
+      "High-strength, corrosion-resistant solar mounting structure designed for rooftop and ground-mounted installations. Engineered to withstand extreme weather conditions while ensuring optimal panel alignment and maximum solar energy output.",
+    features: [
+      "Corrosion-resistant galvanized or aluminum material",
+      "Suitable for rooftop and ground-mount projects",
+      "Adjustable tilt angle for maximum energy generation",
+      "Engineered for high wind & snow load conditions",
+      "Quick and easy installation with modular components",
+    ],
+    specifications: [
+      { label: "Material", value: "GI / Aluminum" },
+      { label: "Tilt Angle", value: "0° - 35° Adjustable" },
+      { label: "Panel Compatibility", value: "All Standard panels" },
+      { label: "Wind Load Capacity", value: "Up to 180 km/h" },
+      { label: "Warranty", value: "10 Years " },
     ],
   },
 

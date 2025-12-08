@@ -1,5 +1,5 @@
 // HomeProductsSlider.jsx
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
@@ -12,62 +12,9 @@ import ProductCard from "../../3.products/components/ProductCard";
 const categories = {
   "solar-light": "Solar Lights",
   "led-light": "LED Lights",
-  poles: "Lighting Poles",
+  poles: "Poles & Structures",
   "solar-power-plant": "Solar Power Plants",
   services: "Our Services",
-};
-
-// --- Lazy wrapper: mounts children only when near viewport ---
-const LazyMount = ({
-  children,
-  rootMargin = "300px",
-  placeholderHeight = 260,
-}) => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  // If running in SSR (no window), mount immediately to avoid mismatch
-  const isSSR = typeof window === "undefined";
-  useEffect(() => {
-    if (isSSR) {
-      setIsVisible(true);
-      return;
-    }
-
-    if (isVisible) return; // already visible, no need to observe
-
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            obs.disconnect();
-          }
-        });
-      },
-      { root: null, rootMargin }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [isVisible, rootMargin, isSSR]);
-
-  return (
-    <div ref={ref} aria-busy={!isVisible} className="w-full">
-      {isVisible ? (
-        children
-      ) : (
-        // Simple skeleton placeholder — tweak to match your design system
-        <div
-          style={{ height: placeholderHeight }}
-          className="w-full rounded-md bg-white/60 border border-gray-100 shadow-sm flex items-center justify-center animate-pulse"
-        >
-          <div className="text-sm text-gray-400">Loading product…</div>
-        </div>
-      )}
-    </div>
-  );
 };
 
 // Slider for each category
@@ -129,7 +76,6 @@ const CategorySlider = ({ title, items }) => {
           nextEl: nextBtn.current,
         }}
         onBeforeInit={(swiper) => {
-          // safe way to attach navigation refs
           swiper.params.navigation.prevEl = prevBtn.current;
           swiper.params.navigation.nextEl = nextBtn.current;
         }}
@@ -146,10 +92,8 @@ const CategorySlider = ({ title, items }) => {
       >
         {items.map((product) => (
           <SwiperSlide key={product.id}>
-            {/* Lazy-mount the ProductCard when the slide is near viewport */}
-            <LazyMount rootMargin="400px" placeholderHeight={280}>
-              <ProductCard id={product.id} />
-            </LazyMount>
+            {/* DIRECT render — no lazy load */}
+            <ProductCard id={product.id} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -163,13 +107,10 @@ const HomeProductsSlider = () => {
 
   return (
     <section className="mt-32 sm:mt-40 mb-24 px-4 sm:px-8 max-w-7xl mx-auto bg-gradient-to-br from-blue-50 via-white to-teal-50">
-      {/* Main Heading */}
       <div className="text-center mb-14">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
           Our Products
         </h2>
-
-        {/* 🌟 NEW SUBTITLE (matches your design system) */}
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
           Explore our wide range of solar, LED, and lighting solutions crafted
           for performance and reliability.

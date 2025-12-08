@@ -15,9 +15,9 @@ function Product() {
         "Energy-efficient LED lighting for industrial and commercial applications",
     },
     poles: {
-      title: "Lighting Poles",
+      title: "Poles & Structures",
       description:
-        "Durable and aesthetic poles for all types of lighting installations",
+        "Reliable, long-lasting poles and structures for lighting, solar, and infrastructure needs.",
     },
     "solar-power-plant": {
       title: "Solar Power Plants",
