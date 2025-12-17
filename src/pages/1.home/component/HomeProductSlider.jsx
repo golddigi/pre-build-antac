@@ -12,8 +12,9 @@ import ProductCard from "../../3.products/components/ProductCard";
 const categories = {
   "solar-light": "Solar Lights",
   "led-light": "LED Lights",
-  poles: "Poles & Structures",
+  poles: "Poles",
   "solar-power-plant": "Solar Power Plants",
+  structures: "Structures",
   services: "Our Services",
 };
 

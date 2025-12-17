@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faBars } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../../assets/icons/antac.png";
+import logo from "../../../assets/icons/antac.jpg";
 import { Link, NavLink } from "react-router-dom";
 import OpenProducts from "./OpenProduct";
 

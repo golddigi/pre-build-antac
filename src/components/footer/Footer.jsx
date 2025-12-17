@@ -6,7 +6,7 @@ import { contact } from "../../data/contact";
 import LocationIcon from "../../assets/icons/location.svg";
 import EmailIcon from "../../assets/icons/email.svg";
 import PhoneIcon from "../../assets/icons/phone.svg";
-import logo from "../../assets/icons/antac.png";
+import logo from "../../assets/icons/antac.jpg";
 
 const linkStyle =
   "w-fit cursor-pointer relative hover:text-[#da251a] after:content-[''] after:absolute after:left-0 after:bottom-[-1px] after:h-[1px] after:w-0 after:bg-[#da251a] after:transition-all after:duration-200 hover:after:w-full";
@@ -27,6 +27,12 @@ function Footer() {
           </div>
 
           <div className="space-y-4">
+            <h4 className="font-bold text-[15px] mb-2 text-gray-800">
+              GST No:{" "}
+              <span className="font-normal text-[14px] text-gray-800 leading-relaxed">
+                08ABTFA4728P1ZL
+              </span>
+            </h4>
             <div>
               <h4 className="font-bold text-[15px] mb-2 text-gray-800">
                 MFG / Factory Address

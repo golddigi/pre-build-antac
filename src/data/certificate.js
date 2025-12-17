@@ -4,6 +4,7 @@ import Iso45001 from "../assets/certicates/45001.jpg";
 import CeMark from "../assets/certicates/CE.jpg";
 import Ip65 from "../assets/certicates/IP-65.jpg";
 import Rohs from "../assets/certicates/rohs.jpg";
+import MSME from "../assets/certicates/msme.webp";
 
 // --- 2. Data Array using Imported Variables ---
 export const certificatesData = [
@@ -42,5 +43,11 @@ export const certificatesData = [
     title: "RoHS Compliant Partner", // Updated based on rohs filename
     src: Rohs,
     alt: "RoHS Compliance Certificate",
+  },
+  {
+    id: 7,
+    title: "MSME Certificate", // MSME certificate
+    src: MSME,
+    alt: "MSME Certificate",
   },
 ];

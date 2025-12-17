@@ -14,18 +14,15 @@ const styles = {
 // ---------------------------------------
 // CATEGORY DISPLAY NAMES
 // (auto maps your product categories)
-// ---------------------------------------
 const categoryTitles = {
   "solar-light": "DC Solar Lights",
   "led-light": "AC LED Lights",
   "solar-power-plant": "Solar Power Plant",
-  services: "Services",
   poles: "Poles",
+  structures: "Structures",
+  services: "Services",
 };
 
-// ---------------------------------------
-// AUTO-GENERATED PRODUCT CATEGORIES
-// (replaces your old hard-coded list)
 // ---------------------------------------
 const productCategories = Object.entries(
   products.reduce((acc, product) => {

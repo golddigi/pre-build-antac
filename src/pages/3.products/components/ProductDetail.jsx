@@ -27,13 +27,25 @@ export default function ProductDetail() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         {/* Image Section */}
-        <div className="bg-white border-2 border-gray-200 p-8 shadow-sm">
+
+        <div className="bg-white border-2 border-gray-200 p-6 shadow-sm">
+          {/* Main Image */}
           <img
             src={product.image}
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain mb-4"
             alt={product.name}
             style={{ maxHeight: "520px" }}
           />
+
+          {/* Secondary Image (optional) */}
+          {product.image2 && (
+            <img
+              src={product.image2}
+              className="w-full h-auto object-contain border-t pt-4"
+              alt={`${product.name} - alternate view`}
+              style={{ maxHeight: "320px" }}
+            />
+          )}
         </div>
 
         {/* Content Section */}

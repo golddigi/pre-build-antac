@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import banners from "../../../data/banner";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -45,14 +46,16 @@ const HeroCarousel = () => {
       >
         {banners.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <picture>
-              <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
-              <img
-                src={slide.image}
-                alt=""
-                className="w-full h-auto object-contain"
-              />
-            </picture>
+            <Link to="/product" className="block cursor-pointer">
+              <picture>
+                <source media="(max-width: 768px)" srcSet={slide.mobileImage} />
+                <img
+                  src={slide.image}
+                  alt=""
+                  className="w-full h-auto object-contain"
+                />
+              </picture>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -1,36 +1,37 @@
 // --------------- SOLAR LIGHTS -----------------
 import allInOne from "../assets/products/solar-light/all-in-one.png";
-import hybridSolarLight from "../assets/products/solar-light/hybrid-solar-light.png";
-import iotRmsLight from "../assets/products/solar-light/iot-rms-light.png";
+import hybridSolarLight from "../assets/products/solar-light/hybrid-solar-light-option.png";
+import iotRmsLight from "../assets/products/solar-light/iot-rms-light-option.png";
 import semiIntegrated from "../assets/products/solar-light/new-semi-intigrated-light.png";
 
 // --------------- LED LIGHTS -----------------
 import floodLight from "../assets/products/led-light/flood-light.png";
 import highBay from "../assets/products/led-light/high-bay.png";
 import ledLight from "../assets/products/led-light/led-light.png";
+import BayLight from "../assets/products/led-light/bay-light.webp";
 
 // --------------- POLES -----------------
 import acHighMast from "../assets/products/poles/ac-high-mast.png";
 import circularPoles from "../assets/products/poles/circular-poles.png";
-import designerPole from "../assets/products/poles/designer-pole.png";
+import designerPole from "../assets/products/poles/designer-poles.png";
 import octagonalPoles from "../assets/products/poles/octagonal-poles.png";
 import solarHighMast from "../assets/products/poles/solar-high-mast.png";
-// import solarMountingStructure from "../assets/products/poles/solar-mounting-structure.webp";
-import solarMountingStructure from "../assets/products/poles/solar-mounting-structure.png";
 
 // --------------- SERVICES -----------------
 import poleInstallation from "../assets/products/services/pole-installation.png";
 import rainWaterHarvesting from "../assets/products/services/rain-water-harvesting.png";
-import solarCleaning from "../assets/products/services/solar-cleaning-worker.jpg";
-import solarAmc from "../assets/products/services/solar-amc.png";
+import solarInstalltion from "../assets/products/services/solar-amc.png";
+import solarAmc from "../assets/products/services/solar-cleaning-worker.jpg";
+import fabricationService from "../assets/products/services/fabrication.jpg";
 
 // --------------- SOLAR POWER PLANTS -----------------
-// import hybridPlant from "../assets/products/solar-power-plant/hybrid.png";
-// import offGridPlant from "../assets/products/solar-power-plant/off-grid.png";
-// import onGridPlant from "../assets/products/solar-power-plant/on-grid.png";
 import hybridPlant from "../assets/products/solar-power-plant/hybrid-solar.png";
 import offGridPlant from "../assets/products/solar-power-plant/off-grid-solar.png";
 import onGridPlant from "../assets/products/solar-power-plant/on-grid-solar.png";
+
+// --------------- STRUCTURES -----------------
+import pebStructure from "../assets/products/structures/peb-structure.webp";
+import solarMountingStructure from "../assets/products/structures/solar-mounting-structure.webp";
 
 export const products = [
   // ---------------------- SOLAR LIGHTS ----------------------
@@ -157,6 +158,7 @@ export const products = [
     id: "high-bay-light",
     name: "LED High Bay Light",
     image: highBay,
+    image2: BayLight,
     category: "led-light",
     shortDescription: "Bright LED high bay for warehouses and industries.",
     description:
@@ -186,14 +188,14 @@ export const products = [
       "Versatile LED lighting solution ideal for homes, offices and commercial spaces, offering superior energy efficiency and long-lasting performance.",
     features: [
       "Energy-saving up to 80% vs traditional bulbs",
-      "Long lifespan of 25,000+ hours",
+      "Long lifespan of 50,000+ hours",
       "Cool daylight output for better visibility",
       "Low heat emission",
       "Mercury-free eco-friendly design",
     ],
     specifications: [
-      { label: "Power Output", value: "9W - 40W" },
-      { label: "Lumens", value: "900 - 4000 lm" },
+      { label: "Power Output", value: "9W - 240W" },
+      { label: "Lumens", value: "900 - 24000 lm" },
       { label: "Base Type", value: "B22/E27" },
       { label: "Color Temperature", value: "3000K - 6500K" },
       { label: "Warranty", value: "1 Year" },
@@ -211,13 +213,13 @@ export const products = [
       "Strong and durable AC-powered high mast lighting system designed for highways, stadiums, ports and large open areas requiring extensive illumination.",
     features: [
       "Heavy-duty galvanized steel construction",
-      "Heights ranging from 15m to 40m",
+      "Heights ranging from 9m to 40m",
       "Multiple light fixture mounting options",
       "Corrosion-resistant coating",
       "Wind-resistant design up to 150 km/h",
     ],
     specifications: [
-      { label: "Height Range", value: "15m - 40m" },
+      { label: "Height Range", value: "9m - 40m" },
       { label: "Material", value: "Galvanized Steel" },
       { label: "Base Plate", value: "12mm - 25mm" },
       { label: "Finish", value: "Hot-dip Galvanized" },
@@ -263,7 +265,7 @@ export const products = [
       "Combines functionality with beauty",
     ],
     specifications: [
-      { label: "Height Range", value: "3m - 8m" },
+      { label: "Height Range", value: "3m - 6m" },
       { label: "Design Options", value: "Custom/Standard" },
       { label: "Material", value: "Cast Iron/Aluminum" },
       { label: "Finish", value: "Powder Coated" },
@@ -314,29 +316,6 @@ export const products = [
       { label: "Battery Backup", value: "3-5 Days" },
       { label: "LED Power", value: "200W - 1000W" },
       { label: "Warranty", value: "5 Years" },
-    ],
-  },
-  {
-    id: "solar-mounting-structure",
-    name: "Solar Mounting Structure",
-    image: solarMountingStructure,
-    category: "poles",
-    shortDescription: "Durable and optimized mounting system for solar panels.",
-    description:
-      "High-strength, corrosion-resistant solar mounting structure designed for rooftop and ground-mounted installations. Engineered to withstand extreme weather conditions while ensuring optimal panel alignment and maximum solar energy output.",
-    features: [
-      "Corrosion-resistant galvanized or aluminum material",
-      "Suitable for rooftop and ground-mount projects",
-      "Adjustable tilt angle for maximum energy generation",
-      "Engineered for high wind & snow load conditions",
-      "Quick and easy installation with modular components",
-    ],
-    specifications: [
-      { label: "Material", value: "GI / Aluminum" },
-      { label: "Tilt Angle", value: "0° - 35° Adjustable" },
-      { label: "Panel Compatibility", value: "All Standard panels" },
-      { label: "Wind Load Capacity", value: "Up to 180 km/h" },
-      { label: "Warranty", value: "10 Years " },
     ],
   },
 
@@ -461,7 +440,7 @@ export const products = [
   {
     id: "solar-installation",
     name: "Solar Panel Installation",
-    image: solarAmc, // keeping the same image variable as requested
+    image: solarInstalltion,
     category: "services",
     shortDescription:
       "Professional solar panel installation for homes and businesses.",
@@ -494,7 +473,7 @@ export const products = [
   {
     id: "solar-amc",
     name: "Solar AMC Service",
-    image: solarCleaning,
+    image: solarAmc,
     category: "services",
     shortDescription: "Annual maintenance for solar installations.",
     description:
@@ -512,6 +491,77 @@ export const products = [
       { label: "Response Time", value: "24-48 Hours" },
       { label: "Contract Period", value: "1-5 Years" },
       { label: "Support", value: "24/7 Helpline" },
+    ],
+  },
+  {
+    id: "fabrication",
+    name: "Fabrication",
+    image: fabricationService,
+    category: "services",
+    shortDescription: "Custom metal fabrication solutions.",
+    description:
+      "End-to-end metal fabrication service delivering durable, precise, and customized structures for residential, commercial, and industrial applications.",
+    features: [
+      "Custom design and fabrication",
+      "High-quality welding and finishing",
+      "Structural strength and durability",
+      "On-site installation support",
+      "Compliance with safety standards",
+    ],
+    specifications: [
+      { label: "Material Types", value: "MS, SS, Aluminum" },
+      { label: "Applications", value: "Residential / Commercial / Industrial" },
+      { label: "Fabrication Type", value: "Custom & Standard" },
+      { label: "Finish Options", value: "Painted / Powder Coated / Polished" },
+      { label: "Turnaround Time", value: "Project-based" },
+    ],
+  },
+  // ---------------------- Structures ----------------------
+  {
+    id: "solar-mounting-structure",
+    name: "Solar Mounting Structure",
+    image: solarMountingStructure,
+    category: "structures",
+    shortDescription: "Durable and optimized mounting system for solar panels.",
+    description:
+      "High-strength, corrosion-resistant solar mounting structure designed for rooftop and ground-mounted installations. Engineered to withstand extreme weather conditions while ensuring optimal panel alignment and maximum solar energy output.",
+    features: [
+      "Corrosion-resistant galvanized or aluminum material",
+      "Suitable for rooftop and ground-mount projects",
+      "Adjustable tilt angle for maximum energy generation",
+      "Engineered for high wind & snow load conditions",
+      "Quick and easy installation with modular components",
+    ],
+    specifications: [
+      { label: "Material", value: "GI / Aluminum" },
+      { label: "Tilt Angle", value: "0° - 35° Adjustable" },
+      { label: "Panel Compatibility", value: "All Standard panels" },
+      { label: "Wind Load Capacity", value: "Up to 180 km/h" },
+      { label: "Warranty", value: "10 Years " },
+    ],
+  },
+  {
+    id: "peb-structure",
+    name: "PEB Structure",
+    image: pebStructure,
+    category: "structures",
+    shortDescription:
+      "Strong and cost-effective pre-engineered building solution.",
+    description:
+      "High-quality Pre-Engineered Building (PEB) structures designed for industrial, commercial, and warehouse applications. Engineered for strength, durability, and faster construction while optimizing material usage and overall project cost.",
+    features: [
+      "Pre-engineered steel structure for faster construction",
+      "High load-bearing capacity and structural stability",
+      "Customizable design as per project requirements",
+      "Weather-resistant and low maintenance",
+      "Cost-effective compared to conventional construction",
+    ],
+    specifications: [
+      { label: "Material", value: "High-Tensile Steel" },
+      { label: "Applications", value: "Industrial / Commercial / Warehouses" },
+      { label: "Span Width", value: "Up to 60 meters" },
+      { label: "Design Standards", value: "IS / ASTM Compliant" },
+      { label: "Service Life", value: "25+ Years" },
     ],
   },
 ];

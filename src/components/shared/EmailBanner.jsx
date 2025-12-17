@@ -42,11 +42,11 @@ const ContactBanner = () => {
 
             {/* CTA Button */}
             <a
-              href="mailto:info@antac.in"
+              href="mailto:sudhirsuhag@antac.in"
               className="group inline-flex items-center gap-2 md:gap-3 bg-white text-emerald-600 px-5 md:px-8 py-3 md:py-4 rounded-full font-semibold text-sm md:text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               <HiEnvelope className="w-4 h-4 md:w-6 md:h-6" />
-              <span>info@antac.in</span>
+              <span>sudhirsuhag@antac.in</span>
               <HiArrowRight className="w-4 h-4 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>

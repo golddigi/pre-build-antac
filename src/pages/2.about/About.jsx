@@ -15,7 +15,7 @@ const About = () => {
         <div className="max-w-5xl mx-auto mb-16">
           <div className="space-y-6 text-base md:text-lg leading-relaxed text-gray-700">
             <p>
-              Founded in 2021, AMBIKANATH TRADER AND CONSULTANT LLP is an
+              Founded in 2020, AMBIKANATH TRADER AND CONSULTANT LLP is an
               ISO-certified company offering reliable solar and LED lighting
               solutions. We provide a wide range of products, including DC Solar
               Lights, All-in-One and Hybrid Solar Lights, IoT-based systems, LED
@@ -96,9 +96,11 @@ const About = () => {
           <h3 className="text-lg font-bold text-gray-900 mb-4">WHO WE ARE</h3>
 
           <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-            ANTAC is a team of experienced professionals who work for their
-            customers’ significant needs in the areas of Engineering Services
-            and Items.
+            ANTAC is a team of highly experienced professionals with more than
+            20+ years of experience in the field of manufacturing world-class
+            products and optimum implementation of projects which help us to
+            deliver customers' significant needs in the areas of Engineering and
+            producing world-class products.
           </p>
         </div>
 
