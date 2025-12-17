@@ -12,7 +12,7 @@ import {
 
 // 1. Office Images
 const officeImages = Object.values(
-  import.meta.glob("/src/assets/office-pics/*.{png,jpg,jpeg}", {
+  import.meta.glob("/src/assets/office-pics/*.{png,jpg,jpeg,webp}", {
     eager: true,
     import: "default",
   })
@@ -20,7 +20,7 @@ const officeImages = Object.values(
 
 // 2. Installation Images
 const installationImages = Object.values(
-  import.meta.glob("/src/assets/product-installation/*.{png,jpg,jpeg}", {
+  import.meta.glob("/src/assets/product-installation/*.{png,jpg,jpeg,webp}", {
     eager: true,
     import: "default",
   })

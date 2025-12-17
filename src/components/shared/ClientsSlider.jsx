@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-const logos = import.meta.glob("../../assets/client/*.png", {
+const logos = import.meta.glob("../../assets/client/*.{png,jpg,jpeg,webp}", {
   eager: true,
 });
 

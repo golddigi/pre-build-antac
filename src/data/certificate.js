@@ -1,9 +1,9 @@
-import Iso9001 from "../assets/certicates/9001.jpg";
-import Iso14001 from "../assets/certicates/14001.jpg";
-import Iso45001 from "../assets/certicates/45001.jpg";
-import CeMark from "../assets/certicates/CE.jpg";
-import Ip65 from "../assets/certicates/IP-65.jpg";
-import Rohs from "../assets/certicates/rohs.jpg";
+import Iso9001 from "../assets/certicates/9001.webp";
+import Iso14001 from "../assets/certicates/14001.webp";
+import Iso45001 from "../assets/certicates/45001.webp";
+import CeMark from "../assets/certicates/CE.webp";
+import Ip65 from "../assets/certicates/IP-65.webp";
+import Rohs from "../assets/certicates/rohs.webp";
 import MSME from "../assets/certicates/msme.webp";
 
 // --- 2. Data Array using Imported Variables ---

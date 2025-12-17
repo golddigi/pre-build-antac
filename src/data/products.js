@@ -1,33 +1,33 @@
 // --------------- SOLAR LIGHTS -----------------
-import allInOne from "../assets/products/solar-light/all-in-one.png";
-import hybridSolarLight from "../assets/products/solar-light/hybrid-solar-light-option.png";
-import iotRmsLight from "../assets/products/solar-light/iot-rms-light-option.png";
-import semiIntegrated from "../assets/products/solar-light/new-semi-intigrated-light.png";
+import allInOne from "../assets/products/solar-light/all-in-one.webp";
+import hybridSolarLight from "../assets/products/solar-light/hybrid-solar-light-option.webp";
+import iotRmsLight from "../assets/products/solar-light/iot-rms-light-option.webp";
+import semiIntegrated from "../assets/products/solar-light/new-semi-intigrated-light.webp";
 
 // --------------- LED LIGHTS -----------------
-import floodLight from "../assets/products/led-light/flood-light.png";
-import highBay from "../assets/products/led-light/high-bay.png";
-import ledLight from "../assets/products/led-light/led-light.png";
+import floodLight from "../assets/products/led-light/flood-light.webp";
+import highBay from "../assets/products/led-light/high-bay.webp";
+import ledLight from "../assets/products/led-light/led-light.webp";
 import BayLight from "../assets/products/led-light/bay-light.webp";
 
 // --------------- POLES -----------------
-import acHighMast from "../assets/products/poles/ac-high-mast.png";
-import circularPoles from "../assets/products/poles/circular-poles.png";
-import designerPole from "../assets/products/poles/designer-poles.png";
-import octagonalPoles from "../assets/products/poles/octagonal-poles.png";
-import solarHighMast from "../assets/products/poles/solar-high-mast.png";
+import acHighMast from "../assets/products/poles/ac-high-mast.webp";
+import circularPoles from "../assets/products/poles/circular-poles.webp";
+import designerPole from "../assets/products/poles/designer-poles.webp";
+import octagonalPoles from "../assets/products/poles/octagonal-poles.webp";
+import solarHighMast from "../assets/products/poles/solar-high-mast.webp";
 
 // --------------- SERVICES -----------------
-import poleInstallation from "../assets/products/services/pole-installation.png";
-import rainWaterHarvesting from "../assets/products/services/rain-water-harvesting.png";
-import solarInstalltion from "../assets/products/services/solar-amc.png";
-import solarAmc from "../assets/products/services/solar-cleaning-worker.jpg";
-import fabricationService from "../assets/products/services/fabrication.jpg";
+import poleInstallation from "../assets/products/services/pole-installation.webp";
+import rainWaterHarvesting from "../assets/products/services/rain-water-harvesting.webp";
+import solarInstalltion from "../assets/products/services/solar-amc.webp";
+import solarAmc from "../assets/products/services/solar-cleaning-worker.webp";
+import fabricationService from "../assets/products/services/fabrication.webp";
 
 // --------------- SOLAR POWER PLANTS -----------------
-import hybridPlant from "../assets/products/solar-power-plant/hybrid-solar.png";
-import offGridPlant from "../assets/products/solar-power-plant/off-grid-solar.png";
-import onGridPlant from "../assets/products/solar-power-plant/on-grid-solar.png";
+import hybridPlant from "../assets/products/solar-power-plant/hybrid-solar.webp";
+import offGridPlant from "../assets/products/solar-power-plant/off-grid-solar.webp";
+import onGridPlant from "../assets/products/solar-power-plant/on-grid-solar.webp";
 
 // --------------- STRUCTURES -----------------
 import pebStructure from "../assets/products/structures/peb-structure.webp";

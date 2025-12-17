@@ -1,18 +1,18 @@
 const banners = [
   {
     id: 1,
-    image: "/light-banner.png",
-    mobileImage: "/light-banner-mobile.png",
+    image: "/light-banner.webp",
+    mobileImage: "/light-banner-mobile.webp",
   },
   {
     id: 2,
-    image: "/infrastructure-banner.png",
-    mobileImage: "/infrastructure-banner-mobile.png",
+    image: "/infrastructure-banner.webp",
+    mobileImage: "/infrastructure-banner-mobile.webp",
   },
   {
     id: 3,
-    image: "/solar-power-plant-banner.png",
-    mobileImage: "/solar-power-plant-banner-mobile.png",
+    image: "/solar-power-plant-banner.webp",
+    mobileImage: "/solar-power-plant-banner-mobile.webp",
   },
 ];
 
